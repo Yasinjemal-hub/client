@@ -28,7 +28,9 @@ export default function Navbar() {
       <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
         <Link to="/" style={navLink}>Play</Link>
         <Link to="/leaderboard" style={navLink}>🏆 Leaderboard</Link>
-
+          {user?.isAdmin && (
+  <Link to="/admin" style={{ ...navLink, color: "#b59f3b" }}>⚙️ Admin</Link>
+)}
         {user ? (
             
           <>
